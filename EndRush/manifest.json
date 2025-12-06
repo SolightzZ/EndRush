@@ -1,25 +1,25 @@
 {
-     "format_version": 2,
-     "header": {
-       "name": "EndRush Timer",
-       "description": "Optimized Speedrun Timer",
-       "uuid": "1686a321-6137-4fb6-bd3b-2824f22d04d3e",
-       "version": [2, 0, 0],
-       "min_engine_version": [1, 21, 90]
-     },
-     "modules": [
-       {
-         "type": "script",
-         "language": "javascript",
-         "uuid": "067f8b99-1b52-47dd-b12a-9efea3ed182a",
-         "version": [1, 21, 124.2],
-         "entry": "scripts/EndRush.js"
-       }
-     ],
-     "dependencies": [
-       {
-         "module_name": "@minecraft/server",
-         "version": "2.4.0-beta"
-       }
-     ]
-   }
+  "format_version": 2,
+  "header": {
+    "name": "EndRush Timer",
+    "description": "Optimized Speedrun Timer",
+    "min_engine_version": [1, 21, 0],
+    "uuid": "1686a321-6137-4fb6-bd3b-2824f22d04d3e",
+    "version": [1, 2, 1]
+  },
+  "modules": [
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "067f8b99-1b52-47dd-b12a-9efea3ed182a",
+      "entry": "scripts/main.js",
+      "version": [1, 21, 140]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.3.0"
+    }
+  ]
+}

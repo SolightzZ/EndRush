@@ -51,7 +51,7 @@
 2. **เพิ่มใน Behavior Pack**
 
    ```
-   your_behavior_pack/
+   EndRush/
    ├── manifest.json
    └── scripts/
        └── EndRush.js
@@ -65,17 +65,17 @@
      "header": {
        "name": "EndRush Timer",
        "description": "Optimized Speedrun Timer",
-       "uuid": "1686a321-6137-4fb6-bd3b-2824f22d04d3e",
-       "version": [2, 0, 0],
-       "min_engine_version": [1, 20, 0]
+       "min_engine_version": [1, 21, 0],
+       "uuid": "55358a1f-1b80-4011-b14e-0cc7cf71f202",
+       "version": [1, 2, 1]
      },
      "modules": [
        {
          "type": "script",
          "language": "javascript",
-         "uuid": "067f8b99-1b52-47dd-b12a-9efea3ed182a",
-         "version": [2, 0, 0],
-         "entry": "scripts/EndRush.js"
+         "uuid": "28975ad0-609b-4749-be01-6522ea42c0ea",
+         "entry": "scripts/EndRush.js",
+         "version": [1, 21, 10]
        }
      ],
      "dependencies": [

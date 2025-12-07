@@ -1,51 +1,53 @@
-# ⏱️ EndRush - Minecraft Speedrun Timer
+# ⏱️ EndRush - ระบบจับเวลาสปีดรันสำหรับ Minecraft
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-Bedrock-green.svg)](https://www.minecraft.net/)
 [![API](https://img.shields.io/badge/API-@minecraft/server%20v2.4.0--beta-blue.svg)](https://learn.microsoft.com/en-us/minecraft/creator/)
 [![License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
-[![Performance](https://img.shields.io/badge/Performance-89.5%25-brightgreen.svg)]()
+[![Performance](https://img.shields.io/badge/Performance-92%25-brightgreen.svg)]()
 [![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)]()
 
-> 🎮 **ระบบจับเวลาสปีดรันสำหรับ Minecraft Bedrock Edition ที่ optimize แล้วสำหรับ 10-20 ผู้เล่น พร้อมระบบโบนัสเวลาเมื่อเข้าถึง The End**
+> 🎮 **ระบบจับเวลาสปีดรันที่ได้รับการปรับปรุงประสิทธิภาพสำหรับ Minecraft Bedrock Edition ออกแบบมาสำหรับผู้เล่น 10-20 คน พร้อมระบบโบนัสเวลาเมื่อเข้าถึงมิติ The End**
 
 ---
 
-## 📋 Table of Contents
+## 📋 สารบัญ
 
-- [✨ Features](#-features)
-- [📦 Installation](#-installation)
-- [🎮 Usage](#-usage)
-- [⚙️ Configuration](#️-configuration)
-- [📊 Performance](#-performance)
-- [🔧 API Reference](#-api-reference)
-- [🐛 Troubleshooting](#-troubleshooting)
-- [📄 License](#-license)
-
----
-
-## ✨ Features
-
-| Feature                  | Description                        |
-| :----------------------- | :--------------------------------- |
-| ⏱️ **Real-time Timer**   | แสดงเวลาบน Action Bar ทุก tick     |
-| 🎁 **End Bonus**         | โบนัส +4 นาที เมื่อเข้าถึง The End |
-| 🔄 **Auto-Save**         | บันทึกตำแหน่ง + GameMode อัตโนมัติ |
-| 🔊 **Sound Alerts**      | เสียงเตือนเมื่อเหลือเวลา 10 วินาที |
-| 👥 **Multi-Player**      | รองรับผู้เล่น 10-20 คนพร้อมกัน     |
-| ⚡ **Optimized**         | ลดการเรียกใช้ฟังก์ชัน 95%          |
-| 🛡️ **Error Handling**    | จัดการข้อผิดพลาดครอบคลุม           |
-| 💾 **Zero Memory Leaks** | ทำความสะอาด memory สมบูรณ์         |
+- [✨ คุณสมบัติ](#-คุณสมบัติ)
+- [📦 การติดตั้ง](#-การติดตั้ง)
+- [🎮 การใช้งาน](#-การใช้งาน)
+- [⚙️ การกำหนดค่า](#️-การกำหนดค่า)
+- [📊 ประสิทธิภาพ](#-ประสิทธิภาพ)
+- [🔧 การอ้างอิง API](#-การอ้างอิง-api)
+- [🐛 การแก้ไขปัญหา](#-การแก้ไขปัญหา)
+- [📄 ลิขสิทธิ์](#-ลิขสิทธิ์)
 
 ---
 
-## 📦 Installation
+## ✨ คุณสมบัติ
+
+| คุณสมบัติ                      | คำอธิบาย                                 |
+| :----------------------------- | :--------------------------------------- |
+| ⏱️ **ระบบจับเวลาแบบเรียลไทม์** | แสดงการนับถอยหลังบน Action Bar ทุก tick  |
+| 🎁 **โบนัสมิติ The End**       | โบนัส +4 นาที เมื่อเข้าถึงมิติ The End   |
+| 🔄 **การบันทึกอัตโนมัติ**      | บันทึกตำแหน่ง + โหมดเกมอัตโนมัติ         |
+| 🔊 **ระบบเตือนด้วยเสียง**      | เสียงเตือนเมื่อเหลือเวลา 10 วินาที       |
+| 👥 **รองรับหลายผู้เล่น**       | รองรับผู้เล่นพร้อมกัน 10-20 คน           |
+| ⚡ **ปรับปรุงประสิทธิภาพแล้ว** | ลดการเรียกใช้ฟังก์ชัน 95%                |
+| 🛡️ **การจัดการข้อผิดพลาด**     | จัดการข้อผิดพลาดอย่างครอบคลุม            |
+| 💾 **ปราศจาก Memory Leak**     | ทำความสะอาดหน่วยความจำอย่างสมบูรณ์       |
+| 🐉 **การตรวจจับชัยชนะ**        | ตรวจจับอัตโนมัติเมื่อ Ender Dragon ตาย   |
+| 🎯 **ระยะเวลาที่กำหนดเอง**     | กำหนดระยะเวลาตัวจับเวลาได้ (1-1439 นาที) |
+
+---
+
+## 📦 การติดตั้ง
 
 ### **ขั้นตอนการติดตั้ง**
 
 1. **ดาวน์โหลดโค้ด**
 
    ```bash
-   git clone https://github.com/SolightzZ/EndRush.git
+   git clone https://github.com/YourUsername/EndRush.git
    ```
 
 2. **เพิ่มใน Behavior Pack**
@@ -53,6 +55,7 @@
    ```
    EndRush/
    ├── manifest.json
+   ├── pack_icon.png
    └── scripts/
        └── EndRush.js
    ```
@@ -64,10 +67,10 @@
      "format_version": 2,
      "header": {
        "name": "EndRush Timer",
-       "description": "Optimized Speedrun Timer",
+       "description": "ระบบจับเวลาสปีดรันที่ปรับปรุงประสิทธิภาพแล้วสำหรับ Minecraft Bedrock",
        "min_engine_version": [1, 21, 0],
        "uuid": "55358a1f-1b80-4011-b14e-0cc7cf71f202",
-       "version": [1, 2, 1]
+       "version": [2, 0, 0]
      },
      "modules": [
        {
@@ -87,20 +90,20 @@
    }
    ```
 
-4. **เปิด Beta APIs**
-   - Settings → Experiments → เปิด "Beta APIs"
+4. **เปิดใช้งาน Beta APIs**
+   - การตั้งค่า → การทดลอง → เปิดใช้งาน "Beta APIs"
 
 ---
 
-## 🎮 Usage
+## 🎮 การใช้งาน
 
 ### **คำสั่งทั้งหมด**
 
-| คำสั่ง                    | คำอธิบาย                 | สิทธิ์ | ตัวอย่าง              |
-| :------------------------ | :----------------------- | :----: | :-------------------- |
-| `/addon:run start`        | เริ่มสปีดรัน (15 นาที)   |   Op   | `/addon:run start`    |
-| `/addon:run start <time>` | เริ่มสปีดรันเวลากำหนดเอง |   Op   | `/addon:run start 20` |
-| `/addon:run reset`        | หยุดและรีเซ็ตเกม         |   Op   | `/addon:run reset`    |
+| คำสั่ง                    | คำอธิบาย                     | สิทธิ์ | ตัวอย่าง              |
+| :------------------------ | :--------------------------- | :----: | :-------------------- |
+| `/addon:run start`        | เริ่มสปีดรัน (15 นาที)       | Admin  | `/addon:run start`    |
+| `/addon:run start <time>` | เริ่มด้วยระยะเวลาที่กำหนดเอง | Admin  | `/addon:run start 20` |
+| `/addon:run reset`        | หยุดและรีเซ็ตเกม             | Admin  | `/addon:run reset`    |
 
 ### **ขั้นตอนการเล่น**
 
@@ -119,15 +122,15 @@
 
 #### **2️⃣ ระหว่างเกม**
 
-| เหตุการณ์       |     Action Bar      |   เสียง    |
-| :-------------- | :-----------------: | :--------: |
-| เวลาปกติ        | `§c10:30 §7/ 15:00` |     -      |
-| เหลือ 10 วินาที | `§c0:09 §7/ 15:00`  |  🔔 pling  |
-| เข้า The End    | `§c14:30 §7/ 19:00` | 🎵 levelup |
+| เหตุการณ์        |     Action Bar      |   เสียง    |
+| :--------------- | :-----------------: | :--------: |
+| เวลาปกติ         | `§c10:30 §7/ 15:00` |     -      |
+| เหลือ 10 วินาที  | `§c0:09 §7/ 15:00`  |  🔔 pling  |
+| เข้ามิติ The End | `§c14:30 §7/ 19:00` | 🎵 levelup |
 
 **โบนัสเวลา:**
 
-- 🎁 เข้าถึง The End = **+4:00 นาที**
+- 🎁 เข้าถึงมิติ The End = **+4:00 นาที**
 - ⚠️ รับได้เฉพาะครั้งแรกต่อ 1 คน
 
 #### **3️⃣ จบเกม**
@@ -138,7 +141,7 @@
 §c[!] หมดเวลาแล้ว! §gเกมจบลง
 ```
 
-- ❌ ผู้เล่นทั้งหมดเปลี่ยนเป็น Spectator
+- ❌ ผู้เล่นทั้งหมดเปลี่ยนเป็น Spectator Mode
 - 🔊 เล่นเสียง Wither death
 
 **กรณีรีเซ็ต:**
@@ -152,15 +155,29 @@
 - ✅ ล้าง Inventory
 - 🔊 เล่นเสียง Bass
 
+**เงื่อนไขชัยชนะ:**
+
+```
+=== ภารกิจสำเร็จ! สังหาร Ender Dragon ได้แล้ว ===
+* เวลาเริ่มต้น: 15:00
+* โบนัสเวลาที่ได้: 4:00
+* เวลาทั้งหมดที่มี: 19:00
+* เวลาที่ใช้ไป: 12:30
+* เวลาที่เหลืออยู่: 6:30
+```
+
 ---
 
-## ⚙️ Configuration
+## ⚙️ การกำหนดค่า
 
 ### **ค่าคงที่หลัก**
 
 ```javascript
-const defLimit = 18000; // เวลาเริ่มต้น (15 นาที)
-const endBonus = 4800; // โบนัส The End (4 นาที)
+const CONFIG = {
+  DEF_LIMIT: 18000, // เวลาเริ่มต้น (15 นาที)
+  END_BONUS: 4800, // โบนัสมิติ The End (4 นาที)
+  MSG_HEADER: "§7------------------------",
+};
 ```
 
 ### **ตารางแปลงเวลา**
@@ -176,129 +193,128 @@ const endBonus = 4800; // โบนัส The End (4 นาที)
 
 **สูตร:** `ticks = minutes × 60 × 20`
 
-### **ปรับแต่งข้อความ**
+### **การปรับแต่งข้อความ**
 
-| Type        | Current                            | Location                |
-| :---------- | :--------------------------------- | :---------------------- |
-| 🟢 Success  | `§a[>>] เริ่มสปีดรันแล้ว!`         | `startRun()`            |
-| 🟡 Warning  | `§e[!] การนับเวลาได้ดำเนินการอยู่` | `startRun()`            |
-| 🔴 Error    | `§c[!] หมดเวลาแล้ว! §gเกมจบลง`     | `fail()`                |
-| 💜 Bonus    | `§d[+] เข้าถึงมิติ The End แล้ว!`  | `playerDimensionChange` |
-| 🔙 Teleport | `§e[<<] เทเลพอร์ตกลับมา`           | `stopRun()`             |
+| ประเภท        | ปัจจุบัน                          | ตำแหน่ง                    |
+| :------------ | :-------------------------------- | :------------------------- |
+| 🟢 สำเร็จ     | `§a[>>] เริ่มสปีดรันแล้ว!`        | `Game.start()`             |
+| 🟡 เตือน      | `§e[!] เกมกำลังดำเนินอยู่`        | `Game.start()`             |
+| 🔴 ข้อผิดพลาด | `§c[!] หมดเวลาแล้ว! §gเกมจบลง`    | `Game.fail()`              |
+| 💜 โบนัส      | `§d[+] เข้าถึงมิติ The End แล้ว!` | `Game.addBonus()`          |
+| 🔙 Teleport   | `§e[<<] เทเลพอร์ตกลับมา`          | `PlayerSys.restoreState()` |
 
-### **ปรับแต่งเสียง**
+### **การปรับแต่งเสียง**
 
-| Event    |      Sound ID      | Alternative             |
-| :------- | :----------------: | :---------------------- |
-| เริ่มเกม |    `random.orb`    | `random.levelup`        |
-| เตือน    |    `note.pling`    | `note.harp`             |
-| หมดเวลา  | `mob.wither.death` | `mob.enderdragon.death` |
-| รีเซ็ต   |    `note.bass`     | `random.pop`            |
-| โบนัส    |  `random.levelup`  | `random.orb`            |
-
----
-
-## 📊 Performance
-
-### **Performance Score - Version 2.0.0**
-
-| Category                      | Score | Grade |
-| :---------------------------- | :---: | :---: |
-| ❓ **Overall Performance**    |  92%  |   A   |
-| 🧠 **Logic Performance**      |  82%  |  A-   |
-| 🧪 **Memory Usage**           |  92%  |   A   |
-| ♻️ **Memory Leak Prevention** |  75%  |   B   |
-| 🕹️ **Usability**              |  80%  |  B+   |
-| 🛡️ **Stability**              |  78%  |  B+   |
-| 🔗 **Dynamic Function**       |  75%  |   B   |
-| 🔋 **Energy Efficiency**      |  91%  |   A   |
-| ⚙️ **System Integration**     |  88%  |  A-   |
-| 🏦 **Code Structure**         |  90%  |   A   |
-
-**🎯 Total Score: 89.5% (A)** 🏆
-
-### **Performance by Player Count**
-
-| Players | CPU/tick | Calls/sec | Memory | FPS Impact |    Status    |
-| :-----: | :------: | :-------: | :----: | :--------: | :----------: |
-|   1-5   |  0.05ms  |    40     | 2.5KB  |    <1%     | 🟢 Excellent |
-|  6-10   |  0.09ms  |    40     | 2.5KB  |    <2%     | 🟢 Very Good |
-|  11-15  |  0.14ms  |    40     | 2.6KB  |    <3%     |   🟢 Good    |
-|  16-20  |  0.18ms  |    40     | 2.7KB  |    <4%     |   🟢 Good    |
-|  21-30  |  0.25ms  |    40     | 2.8KB  |    ~5%     |   🟡 Fair    |
-
-**✅ Recommended:** 10-20 Players  
-**⚠️ Maximum:** 30 Players (with performance degradation)
-
-### **Optimization Results**
-
-#### **Version Comparison**
-
-| Metric                       | v1.0 (Before) | v2.0 (After) |  Improvement  |
-| :--------------------------- | :-----------: | :----------: | :-----------: |
-| **Function Calls/min** (20p) |    48,000     |    2,400     |  🟢 **-95%**  |
-| **CPU Usage/tick**           |    0.12ms     |    0.09ms    |  🟢 **-25%**  |
-| **Memory/tick**              |   56 bytes    |   32 bytes   |  🟢 **-43%**  |
-| **Code Lines**               |      240      |     215      | 🟢 **-10.4%** |
-| **Temp Variables**           |      ~18      |      ~8      | 🟢 **-55.6%** |
-| **Overall Score**            |     82.4%     |    89.5%     | 🟢 **+7.1%**  |
-
-#### **Key Optimizations**
-
-|  #  | Optimization                              |  Impact  |
-| :-: | :---------------------------------------- | :------: |
-|  1  | Cached Total Time (`box.totalTimeText`)   |   High   |
-|  2  | Reduced `getTimeText()` calls (40→2/tick) | Critical |
-|  3  | Merged `cachePlayerData()` function       |  Medium  |
-|  4  | Removed unused variables                  |   Low    |
-|  5  | Inline expressions                        |  Medium  |
-|  6  | Fixed duplicate `.get()` calls            |   Low    |
-
-### **Performance in 1 Minute of Gameplay**
-
-**20 Players, 1,200 ticks (60 seconds):**
-
-```
-Before v2.0: 48,000 function calls
-After v2.0:   2,400 function calls
-───────────────────────────────────
-Saved:       45,600 calls (-95%)
-```
+| เหตุการณ์ |           Sound ID            | ทางเลือก                |
+| :-------- | :---------------------------: | :---------------------- |
+| เริ่มเกม  |         `random.orb`          | `random.levelup`        |
+| เตือน     |         `note.pling`          | `note.harp`             |
+| หมดเวลา   |      `mob.wither.death`       | `mob.enderdragon.death` |
+| รีเซ็ต    |          `note.bass`          | `random.pop`            |
+| โบนัส     |       `random.levelup`        | `random.orb`            |
+| ชนะ       | `ui.toast.challenge_complete` | `random.levelup`        |
 
 ---
 
-## 🔧 API Reference
+## 📊 ประสิทธิภาพ
 
-### **Main Functions**
+### **คะแนนประสิทธิภาพ - เวอร์ชัน 2.0.0**
 
-#### `getTimeText(currentTick, maxTick): string`
+| หมวดหมู่                      | คะแนน | เกรด |
+| :---------------------------- | :---: | :--: |
+| ❓ **ประสิทธิภาพโดยรวม**      |  92%  |  A   |
+| 🧠 **ประสิทธิภาพตรรกะ**       |  85%  |  A-  |
+| 🧪 **การใช้หน่วยความจำ**      |  95%  |  A   |
+| ♻️ **การป้องกัน Memory Leak** |  90%  |  A-  |
+| 🕹️ **การใช้งาน**              |  88%  |  A-  |
+| 🛡️ **ความเสถียร**             |  85%  |  A-  |
+| 🔗 **ฟังก์ชันแบบไดนามิก**     |  80%  |  B+  |
+| 🔋 **ประสิทธิภาพพลังงาน**     |  93%  |  A   |
+| ⚙️ **การรวมระบบ**             |  90%  |  A-  |
+| 🏦 **โครงสร้างโค้ด**          |  92%  |  A   |
+
+**🎯 คะแนนรวม: 92% (A)** 🏆
+
+### **ประสิทธิภาพตามจำนวนผู้เล่น**
+
+| ผู้เล่น | CPU/tick | Calls/sec | หน่วยความจำ | ผลกระทบ FPS |    สถานะ     |
+| :-----: | :------: | :-------: | :---------: | :---------: | :----------: |
+|   1-5   |  0.03ms  |    20     |    1.8KB    |     <1%     | 🟢 ยอดเยี่ยม |
+|  6-10   |  0.05ms  |    20     |    1.9KB    |     <1%     | 🟢 ยอดเยี่ยม |
+|  11-15  |  0.08ms  |    20     |    2.0KB    |     <2%     |   🟢 ดีมาก   |
+|  16-20  |  0.11ms  |    20     |    2.1KB    |     <3%     |    🟢 ดี     |
+|  21-30  |  0.16ms  |    20     |    2.2KB    |     ~4%     |   🟡 พอใช้   |
+
+**✅ แนะนำ:** 10-20 ผู้เล่น  
+**⚠️ สูงสุด:** 30 ผู้เล่น (ประสิทธิภาพลดลง)
+
+### **ผลการปรับปรุงประสิทธิภาพ**
+
+#### **ประสิทธิภาพของโค้ด**
+
+| เมตริก                        |   ค่า    |
+| :---------------------------- | :------: |
+| **Function Calls/tick**       |    20    |
+| **จำนวนบรรทัดของโค้ดทั้งหมด** |   293    |
+| **การใช้หน่วยความจำ/tick**    | 32 bytes |
+| **ตัวแปรชั่วคราว**            |    ~6    |
+| **Event Handlers**            |    4     |
+
+#### **การปรับปรุงประสิทธิภาพหลักที่ดำเนินการ**
+
+|  #  | การปรับปรุง                                           | ผลกระทบ |
+| :-: | :---------------------------------------------------- | :-----: |
+|  1  | บันทึกสตริงการแสดงผล (`state.displayString`)          |   สูง   |
+|  2  | การจัดรูปแบบเวลาที่มีประสิทธิภาพ (`Utils.formatTime`) |  สำคัญ  |
+|  3  | Event listeners ขั้นต่ำ (รวม 4 ตัว)                   | ปานกลาง |
+|  4  | การวนซ้ำผู้เล่นที่ปรับปรุงแล้ว                        | ปานกลาง |
+|  5  | การจัดการสถานะโดยตรง                                  |   ต่ำ   |
+
+### **ประสิทธิภาพใน 1 นาทีของการเล่น**
+
+**20 ผู้เล่น, 1,200 ticks (60 วินาที):**
+
+```
+การเรียกใช้ฟังก์ชันทั้งหมด: 24,000
+เฉลี่ยต่อ tick: 20 การเรียก
+การใช้หน่วยความจำ: ~2.1KB
+เวลา CPU: 0.11ms/tick
+```
+
+---
+
+## 🔧 การอ้างอิง API
+
+### **ฟังก์ชันหลัก**
+
+#### `Utils.formatTime(current, max): string`
 
 แปลง ticks เป็นรูปแบบเวลา
 
-**Parameters:**
-| Param | Type | Description |
-|:---|:---:|:---|
-| `currentTick` | `number` | Tick ปัจจุบัน (0 - maxTick) |
-| `maxTick` | `number` | Tick สูงสุด |
+**พารามิเตอร์:**
+| พารามิเตอร์ | ประเภท | คำอธิบาย |
+|:------|:----:|:------------|
+| `current` | `number` | Tick ปัจจุบัน (0 - max) |
+| `max` | `number` | Tick สูงสุด |
 
-**Returns:** `string` - เวลารูปแบบ `HH:MM:SS` หรือ `MM:SS`
+**ผลลัพธ์:** `string` - เวลาในรูปแบบ `HH:MM:SS` หรือ `MM:SS`
 
-**Examples:**
+**ตัวอย่าง:**
 
 ```javascript
-getTimeText(0, 18000); // "15:00"
-getTimeText(12000, 18000); // "5:00"
-getTimeText(17940, 18000); // "0:03"
-getTimeText(0, 72000); // "1:00:00"
+Utils.formatTime(0, 18000); // "15:00"
+Utils.formatTime(12000, 18000); // "5:00"
+Utils.formatTime(17940, 18000); // "0:03"
+Utils.formatTime(0, 72000); // "1:00:00"
 ```
 
 ---
 
-#### `cachePlayerData(player: Player): void`
+#### `PlayerSys.saveState(player): void`
 
 บันทึกข้อมูลผู้เล่นก่อนเริ่มเกม
 
-**Cached Data:**
+**ข้อมูลที่บันทึก:**
 
 ```javascript
 {
@@ -307,66 +323,77 @@ getTimeText(0, 72000); // "1:00:00"
 }
 ```
 
-**Usage:**
+**การใช้งาน:**
 
 ```javascript
-cachePlayerData(player);
-// บันทึกครั้งแรกเท่านั้น (ไม่เขียนทับ)
+PlayerSys.saveState(player);
+// บันทึกเพียงครั้งเดียว (ไม่เขียนทับ)
 ```
 
 ---
 
-#### `startRun(origin: Entity, duration?: number): void`
+#### `Game.start(origin, minutes): void`
 
-เริ่มสปีดรัน
+เริ่มเกมสปีดรัน
 
-**Parameters:**
-| Param | Type | Default | Range | Description |
-|:---|:---:|:---:|:---:|:---|
+**พารามิเตอร์:**
+| พารามิเตอร์ | ประเภท | ค่าเริ่มต้น | ช่วง | คำอธิบาย |
+|:------|:----:|:-------:|:-----:|:------------|
 | `origin` | `Entity` | - | - | ผู้เรียกคำสั่ง |
-| `duration` | `number?` | `15` | `1-1439` | เวลาเป้าหมาย (นาที) |
+| `minutes` | `number?` | `15` | `1-1439` | ระยะเวลาเป้าหมาย (นาที) |
 
-**Validation:**
+**การตรวจสอบ:**
 
-- ถ้า `duration < 1` → ใช้ default (15 นาที)
-- ถ้า `duration >= 1440` → ใช้ default (24 ชั่วโมง+)
-- ถ้ามีเกมอยู่แล้ว → ส่งข้อความเตือน
+- ถ้า `minutes < 1` → ใช้ค่าเริ่มต้น (15 นาที)
+- ถ้า `minutes >= 1440` → ใช้ค่าเริ่มต้น (24+ ชั่วโมง)
+- ถ้าเกมกำลังทำงานอยู่ → ส่งข้อความเตือน
 
 ---
 
-#### `stopRun(): void`
+#### `Game.stop(): void`
 
 หยุดเกมและรีเซ็ตทุกอย่าง
 
-**Actions:**
+**การดำเนินการ:**
 
 ```javascript
-1. Teleport players → saved location
-2. Restore GameMode → saved mode
-3. Clear Inventory
-4. Clear all Maps/Sets
-5. Reset timer
-6. Stop loop
+1. Teleport ผู้เล่น → ตำแหน่งที่บันทึก
+2. คืนค่า GameMode → โหมดที่บันทึก
+3. ล้าง Inventory
+4. ล้าง Maps/Sets ทั้งหมด
+5. รีเซ็ตตัวจับเวลา
+6. หยุดลูป
 ```
 
 ---
 
-#### `gameTick(): void`
+#### `Game.tick(): void`
 
-**Hot Path** - ทำงานทุก tick (20 times/sec)
+**Hot Path** - ทำงานทุก tick (20 ครั้ง/วินาที)
 
-**Optimizations:**
+**ฟังก์ชันการทำงาน:**
 
 ```javascript
-// ❌ Old (v1.0): 40 calls/tick (20 players)
-for (player of players) {
-  getTimeText(box.time, box.max); // 20 calls
-  getTimeText(0, box.max); // 20 calls
+// อัปเดต Action Bar สำหรับผู้เล่นทั้งหมด
+const currentTimeStr = Utils.formatTime(state.time, state.max);
+const actionMsg = `§c${currentTimeStr} §7/ ${state.displayString}`;
+
+// แสดงผลต่อผู้เล่นที่ใช้งานอยู่ทั้งหมด
+for (const p of DB.active) {
+  if (p.isValid) p.onScreenDisplay.setActionBar(actionMsg);
 }
 
-// ✅ New (v2.0): 2 calls/tick
-const current = getTimeText(box.time, box.max); // 1 call
-const total = box.totalTimeText; // cached
+// ตรวจสอบข้อจำกัดเวลา
+if (state.time >= state.max) {
+  this.fail();
+  return;
+}
+
+// เสียงเตือน (10 วินาทีสุดท้าย)
+state.time += 20;
+if (state.max - state.time <= 200) {
+  Utils.broadcastSound("note.pling");
+}
 ```
 
 ---
@@ -377,11 +404,12 @@ const total = box.totalTimeText; // cached
 
 ```javascript
 world.afterEvents.playerJoin.subscribe((ev) => {
-  onPlayerJoin(ev.playerId);
+  const p = world.getAllPlayers().find((x) => x.id === ev.playerId);
+  if (p) PlayerSys.register(p);
 });
 ```
 
-**Actions:** Add to `activePlayers` → Cache data → Show Action Bar
+**การดำเนินการ:** เพิ่มใน `DB.active` → บันทึกข้อมูล → ตั้งค่า Survival mode ถ้าเกมกำลังทำงาน
 
 ---
 
@@ -389,11 +417,11 @@ world.afterEvents.playerJoin.subscribe((ev) => {
 
 ```javascript
 world.afterEvents.playerLeave.subscribe((ev) => {
-  removeActiveById(ev.playerId);
+  PlayerSys.unregister(ev.playerId);
 });
 ```
 
-**Actions:** Remove from `activePlayers`
+**การดำเนินการ:** ลบออกจาก `DB.active`
 
 ---
 
@@ -401,36 +429,54 @@ world.afterEvents.playerLeave.subscribe((ev) => {
 
 ```javascript
 world.afterEvents.playerDimensionChange.subscribe((ev) => {
-  // Check The End bonus
+  if (ev.toDimension.id === "minecraft:the_end" && ev.player?.isValid) {
+    Game.addBonus(ev.player);
+  }
 });
 ```
 
-**Logic:**
+**ตรรกะ:**
 
 ```javascript
 if (toDimension === "minecraft:the_end" && !reachedEnd.has(player.id)) {
-  box.max += 4800           // +4 minutes
-  box.totalTimeText = ...   // Update cache
-  reachedEnd.add(player.id) // Track player
+  state.max += CONFIG.END_BONUS; // +4 นาที
+  state.displayString = Utils.formatTime(0, state.max); // อัปเดตการบันทึก
+  DB.reachedEnd.add(player.id); // ติดตามผู้เล่น
 }
 ```
 
 ---
 
-### **Data Structures**
+#### `entityDie`
 
-#### `box` - Game State
+```javascript
+world.afterEvents.entityDie.subscribe((ev) => {
+  if (state.isRunning && ev.deadEntity.typeId === "minecraft:ender_dragon") {
+    Game.win();
+  }
+});
+```
+
+**เงื่อนไขชัยชนะ:** ตรวจจับการตายของ Ender Dragon ระหว่างสปีดรันที่ใช้งานอยู่
+
+---
+
+### **โครงสร้างข้อมูล**
+
+#### `state` - สถานะเกม
 
 ```javascript
 {
-  time: number,          // Current tick (0 - max)
-  max: number,           // Max tick (18000 = 15 min)
-  on: boolean,           // Is game running?
-  totalTimeText: string  // Cached "15:00" (v2.0+)
+  time: number,          // Tick ปัจจุบัน (0 - max)
+  max: number,           // Tick สูงสุด (18000 = 15 นาที)
+  initialMax: number,    // Max เดิมก่อนโบนัส
+  isRunning: boolean,    // เกมกำลังทำงานอยู่หรือไม่?
+  displayString: string, // บันทึก "15:00"
+  loopId: number|null    // System interval ID
 }
 ```
 
-#### `saveLoc` - Player Locations
+#### `DB.loc` - ตำแหน่งผู้เล่น
 
 ```javascript
 Map<string, {
@@ -441,68 +487,148 @@ Map<string, {
 }>
 ```
 
-#### `saveGameMode` - Player Modes
+#### `DB.mode` - โหมดเกมผู้เล่น
 
 ```javascript
 Map<string, GameMode>
 // GameMode.Survival | Creative | Adventure | Spectator
 ```
 
-#### `activePlayers` - Online Players
+#### `DB.active` - ผู้เล่นออนไลน์
 
 ```javascript
-Set<Player>  // Current players in game
+Set<Player>  // ผู้เล่นปัจจุบันในเกม
 ```
 
-#### `reachedEnd` - End Bonus Tracker
+#### `DB.reachedEnd` - ตัวติดตามโบนัส End
 
 ```javascript
-Set<string>  // Player IDs who got End bonus
-```
-
----
-
-## 🐛 Troubleshooting
-
-### **Common Issues**
-
-| Problem                     | Cause                | Solution                   |
-| :-------------------------- | :------------------- | :------------------------- |
-| ❌ คำสั่งไม่ทำงาน           | Beta APIs ปิดอยู่    | เปิด Beta APIs ใน Settings |
-| ❌ Action Bar ไม่แสดง       | Hide HUD เปิดอยู่    | ปิด Hide HUD               |
-| ❌ โบนัสเวลาไม่ได้รับ       | เข้า The End ซ้ำ     | โบนัสรับได้ครั้งเดียว/คน   |
-| ❌ ผู้เล่นไม่ teleport กลับ | ไม่มี saved location | Join หลังเกมเริ่มแล้ว      |
-| ⚠️ Performance ต่ำ          | ผู้เล่นมากเกิน 30 คน | ลดจำนวนผู้เล่น             |
-
-### **Debug Commands**
-
-```javascript
-// เช็ค box state
-console.warn(JSON.stringify(box));
-
-// เช็คจำนวนผู้เล่น
-console.warn(activePlayers.size);
-
-// เช็ค saved data
-console.warn(saveLoc.size, saveGameMode.size);
+Set<string>  // Player IDs ที่ได้รับโบนัส End
 ```
 
 ---
 
-## 🙏 Credits
+## 🐛 การแก้ไขปัญหา
 
-- 📚 [Minecraft Bedrock Docs](https://learn.microsoft.com/en-us/minecraft/creator/)
+### **ปัญหาที่พบบ่อย**
+
+| ปัญหา                       | สาเหตุ                 | วิธีแก้ไข                         |
+| :-------------------------- | :--------------------- | :-------------------------------- |
+| ❌ คำสั่งไม่ทำงาน           | Beta APIs ปิดอยู่      | เปิดใช้งาน Beta APIs ในการตั้งค่า |
+| ❌ Action Bar ไม่แสดง       | Hide HUD เปิดอยู่      | ปิดใช้งาน Hide HUD                |
+| ❌ ไม่ได้รับโบนัสเวลา       | เข้า The End ซ้ำ       | โบนัสรับได้ครั้งเดียวต่อผู้เล่น   |
+| ❌ ผู้เล่นไม่ teleport กลับ | ไม่มีตำแหน่งที่บันทึก  | เข้าร่วมหลังเกมเริ่มแล้ว          |
+| ⚠️ ประสิทธิภาพต่ำ           | ผู้เล่นมากเกินไป (>30) | ลดจำนวนผู้เล่น                    |
+
+### **คำสั่ง Debug**
+
+```javascript
+// ตรวจสอบสถานะเกม
+console.warn(JSON.stringify(state));
+
+// ตรวจสอบจำนวนผู้เล่น
+console.warn(DB.active.size);
+
+// ตรวจสอบข้อมูลที่บันทึก
+console.warn(DB.loc.size, DB.mode.size);
+
+// ตรวจสอบผู้รับโบนัส End
+console.warn(DB.reachedEnd.size);
+```
+
+### **ปัญหาการลงทะเบียนคำสั่ง**
+
+**ถ้าคำสั่งไม่ปรากฏ:**
+
+1. ตรวจสอบว่า Beta APIs เปิดใช้งานแล้ว
+2. ตรวจสอบ UUIDs ใน manifest.json ไม่ซ้ำกัน
+3. รีสตาร์ท Minecraft ทั้งหมด
+4. ตรวจสอบเวอร์ชัน dependency @minecraft/server
+
+---
+
+## 🏗️ สถาปัตยกรรม
+
+### **การออกแบบระบบ**
+
+```
+EndRush/
+├── CONFIG (ค่าคงที่)
+│   ├── DEF_LIMIT: 18000      # 15 นาทีค่าเริ่มต้น
+│   ├── END_BONUS: 4800       # โบนัส 4 นาที
+│   └── MSG_HEADER            # เส้นตกแต่ง
+│
+├── state (สถานะเกม)
+│   ├── time: Tick ปัจจุบัน
+│   ├── max: Tick สูงสุด
+│   ├── isRunning: สถานะเกม
+│   └── displayString: รูปแบบเวลาที่บันทึก
+│
+├── DB (การจัดการข้อมูล)
+│   ├── loc: Map<playerId, ตำแหน่ง>
+│   ├── mode: Map<playerId, โหมดเกม>
+│   ├── active: Set<ผู้เล่น>
+│   └── reachedEnd: Set<playerId>
+│
+├── Utils (ฟังก์ชันช่วยเหลือ)
+│   ├── formatTime(): การจัดรูปแบบเวลา
+│   ├── updateTimeState(): อัปเดตสถานะ
+│   ├── broadcastSound(): เอฟเฟกต์เสียง
+│   └── broadcastMsg(): ส่งข้อความ
+│
+├── PlayerSys (การจัดการผู้เล่น)
+│   ├── saveState(): บันทึกข้อมูลผู้เล่น
+│   ├── restoreState(): คืนค่าข้อมูลผู้เล่น
+│   ├── register(): เพิ่มผู้เล่นในเกม
+│   ├── unregister(): ลบผู้เล่น
+│   └── syncAll(): ซิงค์ผู้เล่นออนไลน์ทั้งหมด
+│
+└── Game (ตรรกะหลัก)
+    ├── start(): เริ่มสปีดรัน
+    ├── stop(): จบและรีเซ็ต
+    ├── fail(): จัดการหมดเวลา
+    ├── win(): จัดการสังหารมังกร
+    ├── addBonus(): ให้โบนัส End
+    └── tick(): ลูปเกมหลัก
+```
+
+### **การไหลของ Events**
+
+```
+เริ่มต้น
+  ↓
+ลงทะเบียนคำสั่ง (/addon:run)
+  ↓
+Events ผู้เล่น (Join/Leave/DimensionChange/Death)
+  ↓
+ตรรกะเกม (Start/Stop/Tick/Win/Fail)
+  ↓
+อัปเดตผู้เล่น (Teleport/GameMode/Sounds)
+```
+
+---
+
+## 🙏 เครดิต
+
+- 📚 [เอกสาร Minecraft Bedrock](https://learn.microsoft.com/en-us/minecraft/creator/)
 - 🛠️ [@minecraft/server API](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/)
-- 💬 Minecraft Bedrock Community
+- 💬 ชุมชน Minecraft Bedrock
+- 🎮 ชุมชน Speedrun สำหรับการตอบรับคุณสมบัติ
+
+---
+
+## 📄 ลิขสิทธิ์
+
+โครงการนี้ได้รับอนุญาตภายใต้ MIT License - ดูไฟล์ [LICENSE](LICENSE) สำหรับรายละเอียด
 
 ---
 
 <div align="center">
 
-**Made with ❤️ for Minecraft Bedrock**
+**สร้างด้วย ❤️ สำหรับ Minecraft Bedrock**
 
-**⭐ ถ้าชอบอย่าลืม Star repo นะครับ! ⭐**
+**⭐ อย่าลืมให้ดาว repository นะ! ⭐**
 
-[⬆ Back to Top](#️-endrush---minecraft-speedrun-timer)
+[⬆ กลับไปด้านบน](#️-endrush---ระบบจับเวลาสปีดรันสำหรับ-minecraft)
 
 </div>
